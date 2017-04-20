@@ -317,7 +317,11 @@ function config()
     local win = hs.window.focusedWindow()
     win:maximize()
   end)
-
+  
+  hs.hotkey.bind(cmd_alt, "l", function()
+    hs.caffeinate.lockScreen()
+  end)
+  
   hs.hotkey.bind(cmd_alt_ctrl, "f", function()
     local win = hs.window.focusedWindow()
     if (win) then
